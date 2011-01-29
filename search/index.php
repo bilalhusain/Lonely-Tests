@@ -2,8 +2,8 @@
 	function searchTests($tag)
 	{
 		$searchStr = str_replace("'", "''", stripslashes($tag));
-		$link = mysql_connect("localhost", "bilalhus_locuzr", "myS33kl");
-		mysql_select_db("bilalhus_localdb", $link);
+		$link = mysql_connect("localhost", "_USER_", "_PASSWORD_");
+		mysql_select_db("_DB_", $link);
 		$query = "select Id, Question from LonelyTest where Tags like '%".$searchStr."%' order by Used desc"; // no limit // Options, Tags not required for the time being
 
 		$result = mysql_query($query, $link);

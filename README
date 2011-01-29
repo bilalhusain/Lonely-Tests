@@ -1,0 +1,12 @@
+I have been into the industry for about an year. Long enough to understand the importance of scalability, but not enough to actually come up with the right solution.
+
+The problem here is simple - A facebook app which lets you run a chosen test, the result (just a random selection from the available options) is posted on user's facebook wall. A number of tests can be created but that won't be frequent. Moreover, tags are associated with a test so that search can be conducted.
+
+Current architecture for the demo is simple
+Each test has a corresponding row in LonelyTest table (Id|Question|Options|Tags|Used). Options and Tags are being stored as delimited text.
+
+Assumption:
+- Some tests will be popular, so their data must be cached using some solution like memcachedb.
+- Tests will be less frequently created than taken.
+
+Constraints: Best available resource is my AWS free tier

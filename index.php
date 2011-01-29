@@ -3,8 +3,8 @@
 	// this will be a better but more code if moved to SimpleDB, Java app
 	function pullPopularTests()
 	{
-		$link = mysql_connect("localhost", "bilalhus_locuzr", "myS33kl");
-		mysql_select_db("bilalhus_localdb", $link);
+		$link = mysql_connect("localhost", "_USER_", "_PASSWORD_");
+		mysql_select_db("_DB_", $link);
 		$query = "select Id, Question, Options, Tags from LonelyTest order by Used desc limit 10";
 
 		$result = mysql_query($query, $link);

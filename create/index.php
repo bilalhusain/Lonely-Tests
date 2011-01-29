@@ -12,8 +12,8 @@
 		$tags = str_replace("'", "''", stripslashes($_POST["tags"]));
 		$query = "insert into LonelyTest (Question, Options, Tags) values ('".$question."', '".$options."', '".$tags."')";
 
-                $link = mysql_connect("localhost", "bilalhus_locuzr", "myS33kl");
-                mysql_select_db("bilalhus_localdb", $link);
+                $link = mysql_connect("localhost", "_USER_", "_PASSWORD_");
+                mysql_select_db("_DB_", $link);
 
                 $result = mysql_query($query, $link);
                 if ($result) {

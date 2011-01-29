@@ -5,8 +5,8 @@
 	require '../lonelytest-sdk/util.php';
 
 	$facebook = new Facebook(array(
-		'appId' => '176699202371684',
-		'secret' => '3ac7c44e09ea40dfafe6818648a444b7',
+		'appId' => '_APPID_',
+		'secret' => '_SECRET_',
 		'cookie' => true,
 	));
 
@@ -29,8 +29,8 @@
 			return;
 		}
 
-                $link = mysql_connect("localhost", "bilalhus_locuzr", "myS33kl");
-                mysql_select_db("bilalhus_localdb", $link);
+                $link = mysql_connect("localhost", "_USER_", "_PASSWORD_");
+                mysql_select_db("_DB_", $link);
                 $query = "select Question, Options from LonelyTest where Id = ".$test; // Tags not required for the time being
 
                 $result = mysql_query($query, $link);
